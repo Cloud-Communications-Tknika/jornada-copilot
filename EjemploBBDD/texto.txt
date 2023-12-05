@@ -1,0 +1,3 @@
+Identifica cuantos ejemplares del libro con ISBN 9788417051341 hay a día de hoy '21/06/20' en cada biblioteca de la red, ordenadas de menor a mayor.
+
+Suponiendo que los usuarios disponen de 21 días para la devolución de los libros a partir de la fecha de su perdido, Identifica a día de hoy los libros de 'AMETS ARZALLUS' que no hayan sido devueltos dentro del plazo (título) y el DNI del cliente que no lo ha devuelto.
