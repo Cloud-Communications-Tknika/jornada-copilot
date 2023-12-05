@@ -1,0 +1,14 @@
+Enunciado del problema:
+
+Escribe un programa que solicite al usuario ingresar una cadena de texto y determine si es un palíndromo o no.
+Un palíndromo es una palabra, frase o número que se lee igual de izquierda a derecha que de derecha a izquierda.
+
+El programa debe mostrar un mensaje indicando si la cadena de texto ingresada es un palíndromo o no.
+
+Ejemplo de ejecución:
+
+Ingrese una cadena de texto: radar
+La cadena de texto "radar" es un palíndromo.
+
+Ingrese una cadena de texto: hola
+La cadena de texto "hola" no es un palíndromo.
