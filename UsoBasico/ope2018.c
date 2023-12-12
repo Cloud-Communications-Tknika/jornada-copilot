@@ -1,115 +1,74 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include "funciones.h"
 
-bool is_prime(int n);
-void exchange(int *a, int *b);
-void print_array(int a[], int n);
-void sort(int a[], int n);
-void add20differentNumers(int listToFill[]);
-bool contains(int a[], int index, int x);
+void recoger20elementosDistintos(int lista[]);
+void mostrarLista(int lista[], int elementos);
 
+int main()
+{
 
-int main() {
+    int lista[20], primos[20],compuestos[20];
+    int numeroDePrimos = 0, numeroDeCompusetos = 0;
 
-    int numerList[20], primeList[20], nonPrimeList[20], primeListSize = 0, nonPrimeListSize = 0;
-    add20differentNumers(numerList);
+    recoger20elementosDistintos(lista);
 
-    for (int i = 0; i < 20; i++)
+    for(int i = 0; i < 20; i++)
     {
-        if (is_prime(numerList[i]))
+        if(esPrimo(lista[i]))
         {
-            primeList[primeListSize] = numerList[i];
-            primeListSize++;
+            primos[numeroDePrimos] = lista[i];
+            numeroDePrimos++;
         }
-        else
-        {
-            nonPrimeList[nonPrimeListSize] = numerList[i];
-            nonPrimeListSize++;
+        else{
+            compuestos[numeroDeCompusetos] = lista[i];
+            numeroDeCompusetos++;
         }
     }
 
-    sort(primeList, primeListSize);
-    sort(nonPrimeList, nonPrimeListSize);
+    ordenar(primos, numeroDePrimos);
+    ordenar(compuestos, numeroDeCompusetos);
 
-    printf("Prime numbers: %d\n", primeListSize);
-    print_array(primeList, primeListSize);
-    printf("Non-prime numbers: %d\n", nonPrimeListSize);
-    print_array(nonPrimeList, nonPrimeListSize);
+    printf(" \n primos:  %i \n elementos: \n", numeroDePrimos);
+    mostrarLista(primos, numeroDePrimos);
+    printf(" \n Compuestos:  %i \n elementos: \n", numeroDeCompusetos);
+    mostrarLista(compuestos, numeroDeCompusetos);
+
+    return 0;
 }
 
-bool is_prime(int n)
+void recoger20elementosDistintos(int lista[])
 {
-    if (n < 2) return false;
-    for (int i = 2; i < n; i++)
-        if (n % i == 0) return false;
-    return true;
-}
+    int dato;
+    int elementosRecogidos = 0;
 
-void exchange(int *a, int *b)
-{
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
+    scanf("%i", &dato);
+    
 
-/**
- * @brief Imprime los elementos de un arreglo.
- * 
- * Esta función recibe un arreglo de enteros y su tamaño, y los imprime en la consola.
- * 
- * @param a El arreglo de enteros.
- * @param n El tamaño del arreglo.
- */
-void print_array(int a[], int n)
-{
-    for (int i = 0; i < n; i++)
-        printf("%d ", a[i]);
-    printf("\n");
-}
-
-void sort(int a[], int n)
-{
-    for (int i = 0; i < n; i++)
-        for (int j = i; j < n; j++)
-            if (a[i] > a[j]) exchange(&a[i], &a[j]);
-}
-
-void add20differentNumers(int listToFill[])
-{
-    int i = 0, input;
-    printf("20 different numbers: ");
-    scanf("%d", &input);
-    while (i < 20)
+    while(elementosRecogidos<20)
     {
-        if (!contains(listToFill, i, input))
+        if((dato>0)&&(!contains(lista,elementosRecogidos,dato)))
         {
-            listToFill[i] = input;
-            i++;
+            lista[elementosRecogidos] = dato;
+            elementosRecogidos++;
+            printf("Elemento añadido \n");
         }
-        else
+        else{
+            printf("Elemento no añadido \n");
+        }
+        if(elementosRecogidos<20)
         {
-            printf("Number already exists, try again: ");  
+            scanf("%i", &dato);
         }
 
-        scanf("%d", &input);
+    }
+
+
+}
+
+void mostrarLista(int lista[], int elementos)
+{
+    for (int i=0; i < elementos; i++)
+    {
+        printf("\n %i", lista[i]);
     }
 }
-
-/**
- * Check if an array contains a specific element.
- *
- * @param a The array to search in.
- * @param index The number of elements in the array.
- * @param x The element to search for.
- * @return true if the element is found, false otherwise.
- */
-bool contains(int a[], int index, int x)
-{
-    for (int i = 0; i < index; i++)
-        if (a[i] == x) return true;
-    return false;
-}
-
-
-
-
