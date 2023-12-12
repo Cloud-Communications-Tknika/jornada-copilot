@@ -38,7 +38,7 @@ Aprender rápido utilizando GitHub Copilot.
 
 Aprender a usar Python desde cero.
 
-### Preparando Enunciadose
+### Preparando Enunciados
 
 Buscar propuestas de enunciados y generación de entornos de trabajo.
 
