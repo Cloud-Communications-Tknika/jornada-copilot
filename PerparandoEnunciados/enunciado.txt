@@ -1,0 +1,7 @@
+Enunciado: Escribe un programa en lenguaje de programación de tu elección que lea el contenido de tres archivos de texto llamados 
+"entrada1.txt", "entrada2.txt" y "entrada3.txt", y escriba el contenido de cada archivo en un archi de manera continua llamado
+ "salida.txt". Asegúrate de manejar correctamente la apertura y cierre de 
+ los archivos, así como los posibles errores que puedan ocurrir durante el proceso de lectura y escritura.
+
+Recuerda que puedes adaptar este enunciado según tus necesidades y el lenguaje de programación que estés utilizando.
+
