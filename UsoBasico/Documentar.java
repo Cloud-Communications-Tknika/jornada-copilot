@@ -89,6 +89,17 @@ public class Documentar {
     }
 
 
+    /**
+     * Crea una contraseña fuerte utilizando caracteres, números y caracteres especiales proporcionados.
+     * La contraseña generada tiene una longitud de 14 caracteres y cumple con los siguientes requisitos:
+     * - Al menos 6 caracteres alfabéticos.
+     * - Al menos 5 números.
+     * - Al menos 3 caracteres especiales.
+     * 
+     * @param caracteres un arreglo de caracteres alfabéticos.
+     * @param numeros un arreglo de caracteres numéricos.
+     * @param especiales un arreglo de caracteres especiales.
+     */
     public static void crearContraseñaFuerte(char caracteres[], char numeros[], char especiales[])
     {
         int indice = 1;
@@ -166,6 +177,17 @@ public class Documentar {
 
     
 
+
+    /**
+     * Muestra un menú en la consola con varias opciones y solicita al usuario que elija una.
+     * Las opciones son:
+     * 1. Imprimir cadenas
+     * 2. Generar Contrasena debil
+     * 3. Generar Contrasena fuerte
+     * 4. Salir
+     * 
+     * @return El número correspondiente a la opción seleccionada por el usuario.
+     */
     public static int menu()
     {
         System.out.println("1. Imprimir cadenas");
