@@ -1,9 +1,12 @@
 package UsoBasico;
 
+import java.util.Random;
+
+
 
 public class Error {
     
-    public static main(String[] args) {
+    public static void main(String[] args) {
         
         Random r = new Random();
 

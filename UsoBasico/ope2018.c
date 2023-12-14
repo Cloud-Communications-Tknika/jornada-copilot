@@ -36,6 +36,11 @@ int main()
     return 0;
 }
 
+/**
+ * Recoge 20 elementos distintos en una lista.
+ * 
+ * @param lista[] El arreglo donde se almacenarán los elementos.
+ */
 void recoger20elementosDistintos(int lista[])
 {
     int dato;
@@ -61,8 +66,6 @@ void recoger20elementosDistintos(int lista[])
         }
 
     }
-
-
 }
 
 void mostrarLista(int lista[], int elementos)

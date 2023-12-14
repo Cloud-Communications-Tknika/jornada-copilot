@@ -31,6 +31,11 @@ public class Documentar {
         }
     }
 
+    /**
+     * Rellena un arreglo de caracteres con letras minúsculas y mayúsculas.
+     * 
+     * @param caracteres el arreglo de caracteres a rellenar
+     */
     public static void rellenarCaracteres(char caracteres[])
     {
         int i = 0;
@@ -58,6 +63,13 @@ public class Documentar {
         System.out.print(".\n");
     }
 
+    /**
+     * Crea una contraseña débil utilizando caracteres y números aleatorios.
+     * La contraseña generada consta de 8 caracteres, con al menos 5 caracteres y 3 números.
+     * 
+     * @param caracteres un arreglo de caracteres que se utilizarán para generar la contraseña
+     * @param numeros un arreglo de números que se utilizarán para generar la contraseña
+     */
     public static void crearContraseñaDebil(char caracteres[], char numeros[])
     {
         int indice = 0;
@@ -89,6 +101,17 @@ public class Documentar {
     }
 
 
+    /**
+     * Crea una contraseña fuerte utilizando caracteres, números y caracteres especiales proporcionados.
+     * La contraseña generada tiene una longitud de 14 caracteres y cumple con los siguientes requisitos:
+     * - Al menos 6 caracteres alfabéticos.
+     * - Al menos 5 números.
+     * - Al menos 3 caracteres especiales.
+     * 
+     * @param caracteres un arreglo de caracteres alfabéticos.
+     * @param numeros un arreglo de caracteres numéricos.
+     * @param especiales un arreglo de caracteres especiales.
+     */
     public static void crearContraseñaFuerte(char caracteres[], char numeros[], char especiales[])
     {
         int indice = 1;
