@@ -13,7 +13,68 @@ public class CrearFunciones {
         invertir(a);
         System.out.println("El arreglo ordenado es: ");
         ordenar(a);
+        mostrar(a);
     }
+
+    public static int suma(int[] arreglo){
+        int suma = 0;
+        for(int i = 0; i < arreglo.length; i++){
+            suma += arreglo[i];
+        }
+        return suma;
+    }
+
+    public static double promedio(int[] arreglo){
+        return suma(arreglo) / arreglo.length;
+    }
+
+    public static int mayor(int[] arreglo){
+        int mayor = arreglo[0];
+        for(int i = 1; i < arreglo.length; i++){
+            if(arreglo[i] > mayor){
+                mayor = arreglo[i];
+            }
+        }
+        return mayor;
+    }
+
+    public static int menor(int[] arreglo){
+        int menor = arreglo[0];
+        for(int i = 1; i < arreglo.length; i++){
+            if(arreglo[i] < menor){
+                menor = arreglo[i];
+            }
+        }
+        return menor;
+    }
+
+    public static void invertir(int[] arreglo){
+        for(int i = arreglo.length - 1; i >= 0; i--){
+            System.out.print(arreglo[i] + ", ");
+        }
+        System.out.print("\n");
+    }
+
+    public static void ordenar(int[] arreglo){
+        int aux;
+        for(int i = 0; i < arreglo.length; i++){
+            for(int j = 0; j < arreglo.length - 1; j++){
+                if(arreglo[j] > arreglo[j + 1]){
+                    aux = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = aux;
+                }
+            }
+        }
+    }
+
+    public static void mostrar(int[] arreglo){
+        for(int i = 0; i < arreglo.length; i++){
+            System.out.print(arreglo[i] + ", ");
+        }
+        System.out.print("\n");
+    }
+    
 }
     
     
