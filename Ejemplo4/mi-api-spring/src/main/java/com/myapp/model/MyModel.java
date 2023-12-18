@@ -36,4 +36,20 @@ public class MyModel {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static boolean isPrime(int i)
+    {
+        if (i <= 1)
+            return false;
+        else if (i == 2)
+            return true;
+        else if (i % 2 == 0)
+            return false;
+        for (int j = 3; j <= Math.sqrt(i); j += 2)
+        {
+            if (i % j == 0)
+                return false;
+        }
+        return true;
+    }
 }
