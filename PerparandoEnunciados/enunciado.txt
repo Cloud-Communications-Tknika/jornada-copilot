@@ -1,0 +1,14 @@
+// FILEPATH: /home/prubio/source/jornada-copilot/PerparandoEnunciados/enunciado.txt
+
+Crea una interfaz llamada IReproductorMusica que contenga los siguientes métodos:
+
+reproducir: Este método no recibe ningún parámetro y no devuelve ningún valor. Debe imprimir en la consola "Reproduciendo música".
+
+pausar: Este método no recibe ningún parámetro y no devuelve ningún valor. Debe imprimir en la consola "Pausando música".
+
+siguiente: Este método no recibe ningún parámetro y no devuelve ningún valor. Debe imprimir en la consola "Cambiando a la siguiente canción".
+
+anterior: Este método no recibe ningún parámetro y no devuelve ningún valor. Debe imprimir en la consola "Cambiando a la canción anterior".
+
+Implementa la interfaz IReproductorMusica en una clase llamada ReproductorMusica y proporciona una implementación para cada uno de los métodos.
+
