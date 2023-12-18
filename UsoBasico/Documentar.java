@@ -162,6 +162,13 @@ public class Documentar {
         imprimir(contraseña);
     }
 
+    /**
+     * Verifica si un arreglo de caracteres contiene un valor específico.
+     * 
+     * @param cadena el arreglo de caracteres a verificar
+     * @param valor el valor a buscar en el arreglo
+     * @return true si el valor se encuentra en el arreglo, false de lo contrario
+     */
     public static boolean containsChar(char cadena[], char valor)
     {
         for(int i = 0; i < cadena.length; i++)
